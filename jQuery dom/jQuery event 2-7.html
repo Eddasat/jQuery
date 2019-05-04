@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery event 2-7</title>
+</head>
+<body>
+<ul>
+    <li class="item1">新闻标题-1</li>
+    <li class="item2">新闻标题-2</li>
+    <li class="item3">新闻标题-3</li>
+    <li class="item4">新闻标题-4</li>
+    <li class="item5">新闻标题-5</li>
+    <li class="item6">新闻标题-6</li>
+    <li class="item7">新闻标题-7</li>
+    <li class="item8">新闻标题-8</li>
+    <li class="item9">新闻标题-9</li>
+</ul>
+<button id="even">点击偶数</button>
+<button id="odd">点击奇数</button>
+<button id="all">全部点击</button>
+<script src="jquery/jquery-3.3.1.min.js"></script>
+<script>
+    $(function() {
+
+        $('li:odd').on('click.even', function(e) {
+            console.log('%o 偶数', $(this));
+        });
+        $('li:even').on('click.odd', function(e) {
+            console.log('%o 奇数', $(this));
+        });
+        $('li').eq(0).on('click.even.0', function(e) {
+            console.log('%o 0', $(this));
+        });
+        $('#even').click(function() {
+            $('li').trigger('click.even');
+        });
+        $('#odd').click(function() {
+            $('li').trigger('click.odd');
+        });
+        $('li').off('.even');
+
+    });
+</script>
+</body>
+
+</html>

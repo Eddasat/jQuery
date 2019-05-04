@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>如何创建元素</title>
+</head>
+<body>
+<script src="jquery/jquery-3.3.1.min.js"></script>
+<script>
+    $(function () {
+        //第一种方法
+        var link1 = $('<a>', { //这里的a必须是空元素 加上别的东西例如<a>123</a>是无效的
+            text: 'baidu',
+            href: 'http://www.baidu.com',
+            target: '_blank',
+            title: 'goto baidu'
+        })
+        link1.appendTo('body');
+
+        //第二种方法
+        var link2 = $('<a>baidu</a>').attr({
+            href: 'http://www.baidu.com',
+            target: '_blank',
+            title: 'goto baidu'
+        });
+        link2.appendTo('body');
+    })
+</script>
+</body>
+</html>

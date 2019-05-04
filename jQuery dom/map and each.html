@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Map与each</title>
+</head>
+
+<body>
+<ul>
+    <li class="item1">item1</li>
+    <li class="item2">item2</li>
+    <li class="item3">item3</li>
+    <li class="item4">item4</li>
+    <li class="item5">item5</li>
+    <li class="item6">item6</li>
+    <li class="item7">item7</li>
+    <li class="item8">item8</li>
+    <li class="item9">item9</li>
+</ul>
+<script src="jquery/jquery-3.3.1.min.js"></script>
+<script>
+    var items=[0,1,2,3,4,5,6,7,8,9];
+    var itemsNew=$.map(items,function (i) {
+        if(i>5){
+            return null;
+        }
+        return i;
+    })
+    console.log(items)//[0,1,2,3,4,5,6,7,8,9]
+    console.log(itemsNew)//[0,1,2,3,4,5]
+
+
+
+
+    var item=[0,1,2,3,4,5,6,7,8,9];
+    $.each(item,function (index,ele) {
+        if(index == 2){
+            item[2]="11"
+        }
+    })
+    console.log(item)
+
+
+
+
+
+
+    $(function () {
+
+        //此处写代码
+        console.log($('li').map(function(){
+            return this.innerHTML;
+        }));
+
+
+        var arr=new Array();
+        $('li').each(function(index){
+            arr[index]=this.innerHTML;
+        })
+        console.log(arr);
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 200px 0 0 200px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #999;
+            line-height: 300px;
+            text-align: center;
+            font-size: 50px;
+            color: #fff;
+        }
+
+        #box1 {
+            background-color: #5298c7;
+        }
+    </style>
+</head>
+<body>
+<div id="box1" class="box"></div>
+<script src="../jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+        $('#box1').click(function () {
+            var $this = $(this);
+            $this
+                .css({
+                    position: 'absolute',
+                    top: $this.position().top,
+                    left: $this.position().left
+                })
+                .animate({
+                    opacity: 'hide',
+                    width: $this.width() * 2,
+                    height: $this.height() * 2,
+                    top: $this.position().top - $this.height(),
+                    left: $this.position().left - $this.width()
+                }, 3000)
+        })
+    });
+</script>
+</body>
+</html>

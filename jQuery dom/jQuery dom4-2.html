@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery dom4-2</title>
+</head>
+<body>
+<p>Lorem ipsum dolor sit amet,</p>
+<div class="item"></div>
+<a href="#">link1</a>
+<a href="#">link2</a>
+<a href="#">link3</a>
+<a href="#">link4</a>
+<a href="#">link5</a>
+<a href="#">link6</a>
+<a href="#">link7</a>
+<script src="jquery/jquery-3.3.1.min.js"></script>
+<script>
+    $(function() {
+
+        var element = $('p');
+
+        element.wrap('<div class="box"></div>');
+        element.wrap($('.item'));
+
+        var elements = $('a');
+
+        elements.wrap('<p></p>');
+        elements.wrapAll('<p></p>');
+
+        element.wrapInner($('.item'));
+        element.wrap($('.item'));
+        element.unwrap();
+    });
+</script>
+</body>
+</html>

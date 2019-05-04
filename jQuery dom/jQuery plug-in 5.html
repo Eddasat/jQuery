@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery plug-in 5</title>
+    <link href="http://cdn.bootcss.com/pickadate.js/3.5.6/compressed/themes/default.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/pickadate.js/3.5.6/compressed/themes/default.date.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/pickadate.js/3.5.6/compressed/themes/default.time.css" rel="stylesheet">
+</head>
+<body>
+<input type="text" class="datepicker">
+<br>
+<br>
+<input type="text" class="timepicker">
+<script src="../../../vendor/jquery-1.12.4.js"></script>
+<script src="http://cdn.bootcss.com/pickadate.js/3.5.6/compressed/picker.js"></script>
+<script src="http://cdn.bootcss.com/pickadate.js/3.5.6/compressed/picker.date.js"></script>
+<script src="http://cdn.bootcss.com/pickadate.js/3.5.6/compressed/picker.time.js"></script>
+<script src="http://cdn.bootcss.com/pickadate.js/3.5.6/compressed/translations/zh_CN.js"></script>
+<script>
+    $(function() {
+        var dateinput = $('.datepicker').pickadate();
+        var datepicker = dateinput.pickadate('picker');
+
+
+        $('.timepicker').pickatime();
+
+        datepicker.on({
+            open: function() {
+                console.log('Opened up!');
+            },
+            close: function() {
+                console.log('Closed now');
+            },
+            render: function() {
+                console.log('Just rendered anew');
+            },
+            stop: function() {
+                console.log('See ya');
+            },
+            set: function(thingSet) {
+                console.log('Set stuff:', thingSet);
+            }
+        });
+    });
+</script>
+</body>
+</html>

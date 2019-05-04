@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery plug-in 2</title>
+    <style>
+        .panel {
+            width: 300px;
+            margin: 50px 0 0 50px;
+            box-shadow: 0 0 10px #999;
+            line-height: 1.8;
+            text-align: center;
+            font-size: 20px;
+            color: #fff;
+        }
+
+        .title {
+            background-color: #c7731f;
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .body {
+            padding: 30px 10px;
+            background-color: #5298c7;
+        }
+    </style>
+</head>
+<body>
+<div class="panel">
+    <div class="title">
+        <h1>唐诗一首</h1>
+    </div>
+    <div class="body">
+        <p>
+            白日依山尽，
+            <br> 黄河入海流。
+            <br> 欲穷千里目，
+            <br> 更上一层楼。
+            <br>
+        </p>
+    </div>
+</div>
+<script src="jquery/jquery-1.12.4.js"></script>
+<script src="jquery/jquery.easing.js"></script>
+<script>
+    $(function() {
+
+        $('.title').click(function() {
+
+            $(this).siblings('.body').slideUp(1000, 'easeInOutCirc');
+        });
+
+    });
+</script>
+</body>
+</html>

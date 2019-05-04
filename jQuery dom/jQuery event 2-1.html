@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery event2-1</title>
+</head>
+<body>
+<h2>title</h2>
+<div class="item">
+    <p>Lorem ipsum dolor sit amet.</p>
+</div>
+<ul>
+    <li class="item1">新闻标题-1</li>
+    <li class="item2">新闻标题-2</li>
+    <li class="item3">新闻标题-3</li>
+    <li class="item4">新闻标题-4</li>
+    <li class="item5">新闻标题-5</li>
+    <li class="item6">新闻标题-6</li>
+    <li class="item7">新闻标题-7</li>
+    <li class="item8">新闻标题-8</li>
+    <li class="item9">新闻标题-9</li>
+</ul>
+<div id="p1">
+    <div id="p1-1">
+        <div id="p1-1-1">
+            <div id="p1-1-1-1">
+                <p>
+                    Lorem ipsum dolor sit amet,
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="jquery/jquery-3.3.1.min.js"></script>
+<script>
+    $(function () {
+        $('p').on('click', null, null, function (e) {
+            console.log('p clicked');
+        }).on('click', function (e) {
+            console.log('p clicked2');
+        }).on('click', function (e) {
+            console.log('p clicked3');
+        });
+
+        $('div').on('click', '#p1-1', {foo: 'bar'},
+            function (event) {
+                console.log('p clicked %o', event.data);
+            }).on('mouseover', '#p1-1', {foo: 'bar'},
+            function (event) {
+                console.log('p mouseover %o', event.data);
+            })
+
+
+        $('li').on('click', function (event) {
+            console.log('%o li clicked', $(this));
+        });
+
+        $('ul').on('click', function (event) {
+            console.log('%o Clicked', $(event.target));
+        })
+
+        $('p').on('click', function (e) {
+            e.stopPropagation();
+            console.log('%o clicked', $(this));
+        })
+        $('div').on('click', function (e) {
+            e.stopPropagation();
+            console.log('%o clicked', $(this));
+        })
+        $('p').one('click', function (event) {
+            console.log('%o clicked', $(this));
+        });
+    });
+</script>
+</body>
+</html>

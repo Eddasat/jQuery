@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery dom4-4</title>
+</head>
+<body>
+<h2>标题</h2>
+<div class="item">
+    <p>一段话一段话，一段话。</p>
+</div>
+<ul>
+    <li class="item1">新闻标题-1</li>
+    <li class="item2">新闻标题-2</li>
+    <li class="item3">新闻标题-3</li>
+    <li class="item4">新闻标题-4</li>
+    <li class="item5">新闻标题-5</li>
+    <li class="item6">新闻标题-6</li>
+    <li class="item7">新闻标题-7</li>
+    <li class="item8">新闻标题-8</li>
+    <li class="item9">新闻标题-9</li>
+</ul>
+<script src="jquery/jquery-3.3.1.min.js"></script>
+<script>
+    $(function() {
+        var element = $('ul');
+
+        $('h2').appendTo(element);
+        $('h2').clone().appendTo(element);
+
+        $('.item').data('item', 'item')
+        $('p').data('p', 'p')
+
+        $('.item').clone(true, false).appendTo(element)
+
+        console.log($('ul .item').data())
+        console.log($('ul p').data())
+
+        $('h2').replaceWith('<p>hello</p>');
+        $('<p>hello</p>').replaceAll($('h2'));
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery event2-3</title>
+</head>
+
+<body>
+<div id="p1">
+    <div id="p1-1">
+        <div id="p1-1-1">
+            <div id="p1-1-1-1">
+                <p>
+                    Lorem ipsum dolor sit amet,
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="jquery/jquery-3.3.1.min.js"></script>
+<script>
+    $(function () {
+        $('div').on('click', function (event) {
+            event.stopPropagation();
+            console.log('clicked %o', $(this));
+        }).on('click', function (event) {
+            console.log('clicked2 %o', $(this));
+        });
+
+        $('div').on('click', function (event) {
+            event.stopImmediatePropagation();
+            console.log('clicked %o', $(this));
+        }).on('click', function (event) {
+            console.log('clicked2 %o', $(this));
+        });
+
+    });
+</script>
+</body>
+
+</html>

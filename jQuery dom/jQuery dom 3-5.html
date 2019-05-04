@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery dom3-5</title>
+</head>
+<body>
+<ul>
+    <li class="item1">item-1</li>
+    <li class="item2">item-2</li>
+    <li class="item3">item-3</li>
+    <li class="item4">item-4</li>
+    <li class="item5">item-5</li>
+    <li class="item6">item-6</li>
+    <li class="item7">item-7</li>
+    <li class="item8">item-8</li>
+    <li class="item9">item-9</li>
+</ul>
+</body>
+<script src="jquery/jquery-3.3.1.min.js"></script>
+<script>
+    $(function() {
+
+        var elements = $('li');
+
+        console.log(elements.html());
+        console.log(elements.text());
+
+        // console.log(elements.html('<strong>123</strong>'));
+        // console.log(elements.text('<strong>123</strong>'));
+
+        console.log(elements.eq(0).html('<script>alert("123")<\/script>'));
+    });
+</script>
+</html>

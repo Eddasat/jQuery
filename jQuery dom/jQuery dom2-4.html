@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对jQuery对象的属性、特性以及数据的操作</title>
+</head>
+<body>
+<img id='logo'  src="logo.jpg" alt="jQuery logo"  class="img-jquery" title="jQuery logo" data-id="1" data-data1="html data1" />
+<img id='logo2' src="logo.jpg" alt="jQuery logo"  class="img-jquery2" title="jQuery logo" data-foo-42="bar"/>
+<input type="checkbox" id="check" tabindex="1" style="width: 50px; height: 50px" title="Check this!" description="just a checkbox" checked="true"/>
+<script src="jquery/jquery-3.3.1.min.js"></script>
+<script>
+    $(function () {
+        var img=document.getElementById('logo');
+        console.log(img.getAttribute('class'));//获取某一个特性，获取特性的值总是字符串
+        console.log(img.attributes);//获取元素所有的特性和值
+
+        var checkbox=document.getElementById('check');
+        console.log(checkbox.getAttribute('tabindex'));
+        console.log(checkbox.tabIndex);
+
+        console.log(checkbox.getAttribute('style'));
+        console.log(checkbox.style);
+
+        console.log(checkbox.checked);//返回值为boolean  true
+        console.log(checkbox.getAttribute('checked'));
+        checkbox.checked=false;
+        console.log(checkbox.checked);
+        console.log(checkbox.getAttribute('checked'));
+
+        console.log(checkbox.description)//不是dom内建属性，所以根本没有这个值，只有特性
+        checkbox.description = 'new description';
+        console.log(checkbox.description);
+        console.log(checkbox.getAttribute('description'));
+
+        checkbox.setAttribute('description','new description')
+        console.log(checkbox.description);
+        console.log(checkbox.getAttribute('description'));
+
+        var img = document.getElementById('logo');
+        console.log(img.src);
+        console.log(img.getAttribute('src'));
+
+        img.src = "logo.jpg";
+        console.log(img.src);
+        console.log(img.getAttribute('src'));
+
+        console.log(img.className);
+        console.log(img.getAttribute('class'));
+    })
+    $(function () {
+        var img = $('img');
+
+        // console.log(img.attr('TiTlE'));
+        // console.log(img.attr('title', '123'));
+        // console.log(img.attr('title'));
+
+        var checkbox = $('#check');
+        // console.log(checkbox.attr('checked'));
+
+        // checkbox.checked = true;
+        // console.log(checkbox.attr('checked'));
+        // console.log(checkbox.checked)
+
+        //        console.log(img.attr('id'));
+        //        console.log(img.attr('class'));
+        //
+        //        console.log(checkbox.attr('tabIndex'));
+        //        console.log(checkbox.attr('TABINDEX'));
+        //        console.log(checkbox.attr('checked'));
+
+        // img.attr('title', 'new title');
+        // img.attr({
+        //     title: 'new title',
+        //     alt: 'new alt',
+        //     tabINDEX:2
+        // });
+
+        // img.attr('title', function(index, previousValue) {
+        //     console.log(previousValue)
+        //     return previousValue + '_new_';
+        // });
+
+
+        img.removeAttr('title alt class');
+        console.log(img.attr('title'))
+    })
+    $(function() {
+
+        var img = $('img');
+        var checkbox = $('#check');
+
+        // console.log(checkbox.data('description'));
+        // console.log(checkbox.attr('description'));
+        // console.log(checkbox.prop('description'));
+
+        // console.log(checkbox.data('description','some desc'));
+        // console.log(checkbox.data('description'));
+
+        // checkbox.data('last-desc','some desc');
+        // console.log(checkbox.data('lastDesc'));
+        // console.log(checkbox.data('last-desc'));
+
+        // checkbox.data('Last-desc',{
+        //     foo:'bar'
+        // });
+        // checkbox.data('Last-desc2',{
+        //     foo:'bar'
+        // });
+        // console.log(checkbox.data('LastDesc'));
+        // console.log(checkbox.data());
+
+        // img.data('data1','new data1');
+        // console.log(img.data());
+
+        // console.log(img.removeData('data1'))
+        // console.log(img.data())
+
+        // img.data({
+        //     data1: 'data1',
+        //     data2: 'data2',
+        //     data3: 'data3'
+        // });
+        // console.log(img.removeData('data1 data2'))
+        // console.log(img.data())
+        console.log($.hasData(img.get(0)));
+    });
+    $(function() {
+        var img = $('img');
+        var checkbox = $('#check');
+
+        // console.log(checkbox.prop ('checked'));
+        // console.log(checkbox.get(0).checked)
+        // console.log(checkbox.attr('checked'));
+
+        // console.log(checkbox.prop('tabindex' ));
+        // console.log(checkbox.get(0).tabIndex);
+        // console.log(checkbox.prop('TABINDEX'));
+
+        // console.log(img.prop('className'));
+        // console.log(img.prop('class'));
+
+        //  checkbox.prop('checked',false)
+        // console.log(checkbox.prop('checked'));
+        // console.log(checkbox.attr('checked'));
+
+        // checkbox.removeProp('title')
+        // console.log(checkbox.attr('title'));
+        // console.log(checkbox.prop('title'));
+
+    });
+</script>
+</body>
+</html>

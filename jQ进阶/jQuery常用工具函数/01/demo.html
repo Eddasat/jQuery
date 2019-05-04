@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+</head>
+<body>
+<h1>jQuery</h1>
+<script>
+    var myLib = {
+        hello: function () {
+            console.log('hello')
+        }
+    };
+
+    var $ = myLib;
+    var jQuery = myLib;
+</script>
+<script src="../jquery-1.12.4.js"></script>
+<script>
+
+    //    $.hello();
+
+    //    $(function () {
+    //
+    //        $.hello();
+    //
+    //    });
+
+
+    //    jQuery.noConflict();
+    //    $.hello();
+    //    jQuery(function () {
+    //
+    //        $.hello();
+    //
+    //    });
+
+    var $j = jQuery.noConflict(true);
+    jQuery.hello();
+    $j(function () {
+
+        jQuery.hello();
+
+    });
+
+</script>
+</body>
+</html>

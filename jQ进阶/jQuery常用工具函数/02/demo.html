@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+</head>
+<body>
+<h1>jQuery</h1>
+
+<div id="box">
+    <div id="box1"></div>
+</div>
+<div id="box2"></div>
+<script src="../jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+
+        //Trim
+
+        //        var str = '  hello  world   ';
+        //
+        //        console.log(str);
+        //        console.log($.trim(str));
+        //        console.log(str);
+        //        console.log(str.trim());
+
+        //Iterating properties and collections
+
+        //            var arr = ['one', 'two', 'three'];
+        //
+        //            var obj = {
+        //                one: 1,
+        //                two: 2,
+        //                three: 3
+        //            };
+
+        //            for (var i = 0; i < arr.length; i++) {
+        //                console.log(arr[i]);
+        //            }
+        //
+        //            for (var prop in obj) {
+        //                if (obj.hasOwnProperty(prop)) {
+        //                    console.log(obj[prop]);
+        //                }
+        //            }
+        //            arr.forEach(function (currentValue, index, array) {
+        //                console.log(currentValue);
+        //                console.log(index);
+        //                console.log(array);
+        //            })
+
+        //            $.each(arr, function (index, value) {
+        //                if (index === 1) {
+        //                    return true
+        //                }
+        //                console.log(index);
+        //                console.log(value);
+        //            })
+        //            $.each(obj, function (propertyName, valueOfProperty) {
+        //                if (propertyName === 'two') {
+        //                    return false
+        //                }
+        //                console.log(propertyName);
+        //                console.log(valueOfProperty);
+        //            })
+
+
+        //Filtering arrays
+
+        //        var arr = [1, 3, 6, 13, 38, 9, 8, 24, 15];
+        //        var arr2 = $.grep(arr, function (value, index) {
+        //            return value > 10;
+        //        })
+        //        console.log(arr);
+        //        console.log(arr2);
+
+
+        //Translating arrays
+
+        //        var arr = [1, 2, 3, 4, 5];
+        //        var arr2 = $.map(arr, function (value, index) {
+        //            //            return value + 1;
+        //            //            return null;
+        //            return '';
+        //        })
+        //        console.log(arr);
+        //        console.log(arr2);
+
+        //        var arr = ['hello', 'world'];
+        //        var arr2 = $.map(arr, function (value, index) {
+        //            return value.split('');
+        //        })
+        //        console.log(arr);
+        //        console.log(arr2);
+
+        //Other arrays function
+
+        //        console.log($.inArray(2, [1, 2, 3, 4, 5]));
+
+        //        var arrayLikeObject = {
+        //            0: 'a',
+        //            1: 'b',
+        //            2: 'c',
+        //            length: 3
+        //        }
+        //        console.log(arrayLikeObject);
+        //        console.log($.makeArray(arrayLikeObject));
+
+        //        var arr1 = [0, 1, 2]
+        //        var arr2 = [3, 4, 5]
+        //        console.log(arr1);
+        //        console.log(arr2);
+        //
+        //        $.merge(arr1, arr2);
+        //        console.log(arr1);
+        //        console.log(arr2);
+
+        //Extending objects
+
+        //        var target = { a: 1, b: 2, c: 3 };
+        //        var source1 = { c: 4, d: 5, e: 6 };
+        //        var source2 = { c: 7, e: 8, f: 9 };
+        //
+        //        console.log($.extend(target, source1, source2));
+        //
+        //        var mergedObj = $.extend({}, source1, source2);
+        //
+        //        console.log(mergedObj);
+        //        console.log(source1);
+        //        console.log(source2);
+
+        //        var target = { a: 1, b: 2 };
+        //        var source1 = { b: { b1: 2.1, b2: 2.2 }, c: 3 };
+        //        var source2 = { b: { b3: 2.3, b4: 2.4 }, d: 4 };
+        //
+        //        console.log($.extend(target, source1, source2));
+        //       console.log($.extend(true, target, source1, source2));
+
+
+        //Testing objects
+
+        //        var happySum = function (numX, numY, callback) {
+        //            if (!$.isNumeric(numX) || !$.isNumeric(numY)) {
+        //                console.error('参数错误');
+        //                return;
+        //            }
+        //            if ($.isFunction(callback)) {
+        //                callback();
+        //            }
+        //            console.log(numX + numY);
+        //            return numX + numY;
+        //        }
+        //
+        //        happySum(1, 2);
+        //        happySum(1, 2, function () {
+        //            console.log('加法完成');
+        //        });
+        //        happySum(1, '2');
+        //        happySum(1, 'a');
+        //        happySum('a', 'b');
+
+        //        console.log($.type(3));
+        //        console.log($.type(true));
+        //        console.log($.type('3'));
+        //        console.log($.type([1, 2, 3]));
+        //        console.log($.type({ a: 1 }));
+        //        console.log($.type(new Date()));
+        //        console.log($.type(/test/));
+        //        console.log($.type(null));
+        //        console.log($.type(undefined));
+
+        //Others
+
+        //        console.log($.contains(document.getElementById('box'), document.getElementById('box1')));
+        //        console.log($.contains(document.getElementById('box'), document.getElementById('box2')));
+        //        console.log($('#box').has($('#box1')));
+        //        console.log($('#box').has($('#box2')));
+
+        // var happySum = function (numX, numY, callback) {
+        //     if (!$.isNumeric(numX) || !$.isNumeric(numY)) {
+        //         $.error('参数错误');
+        //         return;
+        //     }
+        //     if ($.isFunction(callback)) {
+        //         callback();
+        //     }
+        //     console.log(numX + numY);
+        //     return numX + numY;
+        // }
+        // happySum(1, 'a');
+
+    });
+</script>
+</body>
+</html>

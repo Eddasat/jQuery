@@ -1,0 +1,57 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+    <!--<meta charset="UTF-8">-->
+    <!--<title>检测和转换dom和jQuery对象</title>-->
+<!--</head>-->
+<!--<body>-->
+<!--&lt;!&ndash;<div id="div">div</div>&ndash;&gt;-->
+<!--<script src="jquery/jquery-3.3.1.min.js"></script>-->
+<!--<script>-->
+    <!--// $(function () {-->
+    <!--//     var DOMObject = document.getElementById("div");-->
+    <!--//     var jqueryObject=$("#div");-->
+    <!--//     console.log(DOMObject);-->
+    <!--//     console.log(jqueryObject);-->
+    <!--//     console.log(DOMObject.nodeType);//->1-->
+    <!--//     console.log(jqueryObject.jquery);//->版本号-->
+    <!--//     console.log($(DOMObject));  //dom转换成jQuery对象-->
+    <!--//     console.log(jqueryObject.get(0));//jQuery对象转换成dom对象-->
+    <!--// })-->
+    <!--$(function () {-->
+        <!--var div = $("<div>hello</div>");-->
+        <!--console.log(div);//打印jQuery对象-->
+        <!--div.appendTo('body');//appendTo()追加到body最后面，放到页面上-->
+        <!--console.log($("div"));//在内存中而不在页面上 选择器是选择不到的 必须得执行上一步先放到页面上 才能选出来(length为0就是没有选到)-->
+    <!--})-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>检查和获取元素</title>
+</head>
+<body>
+<ul>
+    <li class="item-1">item-1</li>
+    <li class="item-2">item-2</li>
+    <li class="item-3">item-3</li>
+</ul>
+<script src="jquery/jquery-3.3.1.min.js"></script>
+<script>
+    $(function () {
+        var elements=$('li');
+        var elements2=$('div');
+        console.log(elements.length);//3
+        console.log(elements2.length)//0
+        console.log(elements2[0])//等同于elements2.get(0) 转换成dom对象 但是结果都是undefined
+        console.log(elements2.eq(0).addClass('blue'))//大部分jQuery方法默认增加了对元素数量的判断，调用时是不会报错的
+        console.log(elements.get(0))//获取第一个li元素 相当于elements[0]
+        console.log(elements.get())//获取全部li元素
+        console.log(elements.eq(0))//也是想当于获取第一个元素，但是不能eq()，什么都获取不到
+    })
+</script>
+</body>
+</html>

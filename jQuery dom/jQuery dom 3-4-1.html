@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery dom3-4-1</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            background-color: #ccc;
+            margin: 20px;
+            overflow: hidden;
+        }
+
+        .item {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            background: red;
+            margin: 20px;
+            top: 10px;
+            left: 15px;
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="demo">
+    <div class="item"></div>
+</div>
+<script src="jquery/jquery-3.3.1.min.js"></script>
+<script>
+    $(function () {
+        var demo = $('#demo');
+        var element = $('.item');
+
+        console.log(element.offset());
+        console.log(element.position());
+    });
+</script>
+</body>
+</html>

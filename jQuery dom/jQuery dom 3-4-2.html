@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery dom3-4-2</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #ccc;
+            overflow: auto;
+        }
+
+        p {
+            width: 500px;
+            /*visibility: hidden;*/
+        }
+    </style>
+</head>
+<body>
+<div class="box" id="demo">
+    <p>Lorem ipsum,</p>
+</div>
+<script src="jquery/jquery-3.3.1.min.js"></script>
+<script>
+    $(function() {
+        var demo = $('#demo');
+        console.log(demo.scrollTop());
+        console.log(demo.scrollLeft());
+
+        demo.scrollTop(300);
+        demo.scrollLeft(100);
+
+        console.log(demo.scrollTop());
+        console.log(demo.scrollLeft());
+    });
+</script>
+</body>
+</html>

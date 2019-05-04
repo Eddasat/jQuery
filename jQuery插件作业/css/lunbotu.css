@@ -1,0 +1,86 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.main{
+    width: 1200px;
+    height: 460px;
+    overflow: hidden;
+    margin: 30px auto;
+    position: relative;
+}
+.banner{
+    width: 1200px;
+    height: 460px;
+    overflow: hidden;
+    position: relative;
+}
+.banner-slide{
+    width: 1200px;
+    height: 460px;
+    background-repeat: no-repeat;
+    position: absolute;
+    display: none;
+}
+.slide-active {
+    display: block;
+}
+
+.slide1 {
+    background-image: url("../img/1.jpg");
+}
+.slide2 {
+    background-image: url("../img/2.jpg");
+}
+.slide3 {
+    background-image: url("../img/3.jpg");
+}
+.slide4 {
+    background-image: url("../img/4.jpg");
+}
+.slide5 {
+    background-image: url("../img/5.jpg");
+}
+.button.prev{
+    position: absolute;
+    width: 40px;
+    height: 80px;
+    left:0;
+    top: 50%;
+    margin-top: -40px;
+    background: url("../img/pre2.png") no-repeat center center;
+}
+.button.next{
+    position: absolute;
+    width: 40px;
+    height: 80px;
+    right:0;
+    top: 50%;
+    margin-top: -40px;
+    background: url("../img/pre.png") no-repeat center center;
+}
+.button:hover{
+    background-color: #333;
+    opacity: 0.8;
+}
+.dots{
+    position: absolute;
+    right: 20px;
+    bottom: 24px;
+}
+
+.dots span{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(7,17,27,0.4);
+    box-shadow: 0 0 0 2px rgba(255,255,255,0.8) inset;
+}
+
+.dots span.active{
+    background: #fff;
+    box-shadow: 0 0 0 2px rgba(7,17,27,0.4) inset;
+}
+
+

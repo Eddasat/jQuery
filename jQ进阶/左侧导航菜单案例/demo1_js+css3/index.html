@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1,maximum-scale=1,maximum-scale=1, user-scalable=no"
+          name="viewport">
+    <title>demo</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/demo.css">
+</head>
+<body>
+<!-- 代码部分begin -->
+<section class="wraper-page">
+    <header class="header">
+        <span class="btn-slide-bar"></span>
+        <h1 class="page-title">header</h1>
+    </header>
+    <p>请使用你的移动网页浏览本页面</p>
+    <p>点击左上角按钮试试效果</p>
+    <footer class="footer">footer</footer>
+</section>
+<section class="slide-bar">
+    <ul>
+        <li>首页</li>
+        <li>菜单导航</li>
+        <li>jQuery特效</li>
+        <li>CSS3特效</li>
+        <li>tab标签</li>
+    </ul>
+</section>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        (function () {
+            var _btn = document.querySelector(".btn-slide-bar"),
+                _body = document.querySelector("body");
+            _btn.onclick = function () {
+                _body.classList.toggle("active");
+            }
+        })(window)
+    }, false);
+</script>
+<!-- 代码部分end -->
+</body>
+</html>

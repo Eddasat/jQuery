@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery event2-2</title>
+</head>
+
+<body>
+<p>Lorem ipsum dolor sit amet,</p>
+<script src="jquery/jquery-3.3.1.min.js"></script>
+<script>
+    $(function () {
+
+        var clicked2 = function () {
+            console.log('clicked2');
+        };
+
+        $('p').on('click', function() {
+            console.log('clicked');}).on('click', clicked2)
+        $('p').on('click', function() {
+            console.log('clicked');
+        }).on('click', clicked2).on('mouseover',function(){
+            console.log('mouseover');
+        })
+
+
+        // $('p').off('click');
+        // $('p').off('click', clicked2)
+        // $('p').off('click mouseover');
+        $('p').off();
+    });
+</script>
+</body>
+
+</html>

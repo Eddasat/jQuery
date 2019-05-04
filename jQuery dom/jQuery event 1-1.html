@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery event1-1</title>
+</head>
+<body>
+<p id="example" onclick="console.log('Click')">
+    Lorem ipsum dolor sit amet,
+</p>
+<div id="p1">
+    <div id="p1-1">
+        <div id="p1-1-1">
+            <div id="p1-1-1-1">
+                <p>
+                    Lorem ipsum dolor sit amet,
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementById('example').onclick = function(event) {
+        console.log('Click me');
+    };
+    document.getElementById('example').onclick = function(event) {
+        event = event || window.event;
+        console.log('Click me2');
+    };
+    document.getElementById('p1').onclick = function(event) {
+        console.log('Click p1');
+    };
+    document.getElementById('p1-1').onclick = function(event) {
+        console.log('Click p1-1');
+    };
+    document.getElementById('p1-1-1').onclick = function(event) {
+        console.log('Click p1-1-1');
+    };
+    document.getElementById('p1-1-1-1').onclick = function(event) {
+        console.log('Click p1-1-1-1');
+        event.cancelBubble = true;
+        event.stopPropagation();
+    };
+</script>
+</body>
+</html>

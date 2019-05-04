@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <style>
+        .box {
+            position: absolute;
+            width: 100px;
+            height: 100px;
+            top: 200px;
+            left: 200px;
+            border-radius: 10px;
+            box-shadow: 0 0 20px #999;
+            line-height: 300px;
+            text-align: center;
+            font-size: 50px;
+            color: #fff;
+        }
+
+        #box1 {
+            background-color: #5298c7;
+        }
+    </style>
+</head>
+<body>
+<div id="box1" class="box"></div>
+
+<script src="../jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+
+        //        $('#box1').queue('chain', function () {
+        //            console.log('第1次');
+        //        }).queue('chain', function () {
+        //            console.log('第2次');
+        //        }).queue('chain', function () {
+        //            console.log('第3次');
+        //        }).queue('chain', function () {
+        //            console.log('第4次');
+        //        })
+
+        //        $('#box1').queue('chain', function (next) {
+        //            console.log('第1次');
+        //            next();
+        //        }).queue('chain', function (next) {
+        //            console.log('第2次');
+        //            next();
+        //        }).queue('chain', function (next) {
+        //            console.log('第3次');
+        //            next();
+        //        }).queue('chain', function (next) {
+        //            console.log('第4次');
+        //        })
+
+        //        $('#box1').queue('chain', function (next) {
+        //            $(this).animate({ left: '+=50' }, 'slow');
+        //            next();
+        //        }).queue('chain', function (next) {
+        //            $(this).animate({ top: '+=50' }, 'slow');
+        //            next();
+        //        }).queue('chain', function (next) {
+        //            $(this)
+        //                .delay(1000)
+        //                .animate({ left: '+=50', top: '+=50' }, 'slow');
+        //            next();
+        //        }).queue('chain', function (next) {
+        //            $(this).animate({ opacity: 0.2 }, 'slow');
+        //            next();
+        //        }).queue('chain', function (next) {
+        //            $(this).animate({ opacity: 1 }, 'slow');
+        //        })
+
+        $('#box1').click(function () {
+            var $this = $(this);
+
+            //            $this.animate({ left: '+=50' }, 'slow');
+            //            $this.animate({ top: '+=50' }, 'slow');
+
+            //            $this.animate({ left: '+=50', top: '+=50' }, 'slow');
+
+            //            console.log('1');
+            //            $this.animate({ left: '+=50' }, 'slow');
+            //            console.log('2');
+            //            $this.animate({ top: '+=50' }, 'slow');
+            //            console.log('3');
+
+            //            $this.animate({ left: '+=50' }, 'slow', function () {
+            //                $this.animate({ top: '+=50' }, 'slow');
+            //            });
+
+            //            console.log($this.queue('chain'));
+            //            $this.dequeue('chain');
+            //            console.log($this.queue('chain'));
+
+
+            //            console.log($this.queue('chain'));
+            //            $this.clearQueue('chain');
+            //            console.log($this.queue('chain'));
+
+
+            //            $this.animate({ left: '+=50' }, 'slow');
+            //            $this.animate({ top: '+=50' }, 'slow');
+            //            $this.css({ backgroundColor: '#999' });
+            //            $this.animate({ left: '+=50' }, 'slow');
+            //            $this.animate({ top: '+=50' }, 'slow');
+
+            //            $this.animate({ left: '+=50' }, 'slow', function () {
+            //                $this.animate({ top: '+=50' }, 'slow', function () {
+            //                    $this.css({ backgroundColor: '#999' });
+            //                    $this.animate({ left: '+=50' }, 'slow');
+            //                    $this.animate({ top: '+=50' }, 'slow');
+            //                });
+            //            });
+            $this.animate({left: '+=50'}, 'slow');
+            $this.animate({top: '+=50'}, 'slow');
+            $this.queue('fx', function () {
+                $(this)
+                    .css({backgroundColor: '#999'})
+                    .dequeue('fx');
+            });
+            $this.animate({left: '+=50'}, 'slow');
+            $this.animate({top: '+=50'}, 'slow');
+        })
+    });
+</script>
+</body>
+</html>

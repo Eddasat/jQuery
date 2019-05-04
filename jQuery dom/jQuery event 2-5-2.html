@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery event 2-5-2</title>
+    <style>
+        .outer {
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            color: #fff;
+            background-color: green;
+        }
+
+        .inner {
+            width: 100px;
+            height: 100px;
+            margin: 30px auto;
+            padding: 20px;
+            color: #fff;
+            background-color: orange;
+        }
+
+        #outer2 {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+<div class="outer" id="outer1">
+    Outer 1
+    <div class="inner" id="inner1">Inner 1</div>
+</div>
+<div class="outer" id="outer2">
+    Outer 2
+    <div class="inner" id="inner2">Inner 2</div>
+</div>
+<script src="jquery/jquery-3.3.1.min.js"></script>
+<script>
+    $(function () {
+        function report(event) {
+            event.stopPropagation();
+            console.log(event.type + ' on ' + event.target.id);
+        }
+
+        $('#outer1').on('mouseover mouseout', report);
+        $('#inner1').on('mouseover mouseout', report);
+        $('#outer2').hover(report);
+        $('#inner2').hover(report);
+    });
+</script>
+</body>
+</html>

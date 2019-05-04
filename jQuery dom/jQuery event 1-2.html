@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery event1-2</title>
+</head>
+<body>
+<p id="example">
+    Lorem ipsum dolor sit amet,
+</p>
+<div id="p1">
+    <div id="p1-1">
+        <div id="p1-1-1">
+            <div id="p1-1-1-1">
+                <p>
+                    Lorem ipsum dolor sit amet,
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var element = document.getElementById('example');
+    element.addEventListener('click', function (event) {
+        console.log('Click');
+    }, false);
+    element.addEventListener('click', function (event) {
+        console.log('Click2');
+    }, false);
+    element.addEventListener('click', function (event) {
+        console.log('Click3');
+    }, false);
+
+
+    document.getElementById('p1').addEventListener('click', function () {
+        console.log('Click p1');
+    }, false);
+
+    document.getElementById('p1-1').addEventListener('click', function () {
+        console.log('Click p1-1');
+    }, false);
+
+    document.getElementById('p1-1-1').addEventListener('click', function () {
+        console.log('Click p1-1-1');
+    }, false);
+
+    document.getElementById('p1-1-1-1').addEventListener('click', function () {
+        console.log('Click p1-1-1-1');
+    }, false);
+
+    document.getElementById('p1').addEventListener('click', function () {
+        console.log('Click p1');
+    }, true);
+
+    document.getElementById('p1-1').addEventListener('click', function () {
+        console.log('Click p1-1');
+    }, true);
+
+    document.getElementById('p1-1-1').addEventListener('click', function () {
+        console.log('Click p1-1-1');
+    }, true);
+
+    document.getElementById('p1-1-1-1').addEventListener('click', function () {
+        console.log('Click p1-1-1-1');
+    }, true);
+</script>
+</body>
+</html>

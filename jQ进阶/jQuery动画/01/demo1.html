@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            margin: 50px 0 0 50px;
+            border-radius: 30px;
+            box-shadow: 0 0 20px #999;
+            line-height: 300px;
+            text-align: center;
+            font-size: 50px;
+            color: #fff;
+        }
+
+        #box1 {
+            /*display: inline-block;*/
+            background-color: #5298c7;
+        }
+
+        #box2 {
+            background-color: #c7731f;
+        }
+
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<div id="box1" class="box">box1</div>
+<div id="box2" class="box">box2</div>
+
+<script src="../jquery-1.12.4.js"></script>
+<script>
+    $(function () {
+
+        //        setTimeout(function () {
+        //            $('#box1').addClass('hide')
+        //            setTimeout(function () {
+        //                $('#box1').removeClass('hide')
+        //            }, 2000)
+        //        }, 2000)
+
+        setTimeout(function () {
+            $('#box1').hide()
+            setTimeout(function () {
+                $('#box1').show()
+            }, 2000)
+        }, 2000)
+
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>通过关系查找jQuery对象</title>
+</head>
+<body>
+<div id="box1">
+    <div id="box2">
+        <div id="box3">
+            <p id="info">hello</p>
+            <ul>
+                <li class="item1">item1</li>
+                <li class="item2">item2</li>
+                <li class="item3">item3</li>
+                <li class="item4">item4</li>
+                <li class="item5">
+                    item5
+                    <ul></ul>
+                </li>
+                <li class="item6">item6</li>
+                <li class="item7">item7</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script src="jquery/jquery-3.3.1.min.js"></script>
+<script>
+    $(function () {
+        var element = $('#box1'),
+            element1 = $('#info');
+
+        console.log(element.children());
+        console.log(element1.parents('div'));
+        console.log(element1.contents());
+        console.log(element.find('p'));
+        console.log(element1.parent('#box2'));
+        console.log(element1.parents('#box2'));
+        console.log(element1.parentsUntil('#box2'));
+        console.log(element1.closest('#info'));
+        console.log(element1.parents('div'));
+        console.log(element1.closest('div'));
+        console.log($('.item1').next('li'));
+        console.log($('.item2').prev('li'));
+        console.log($('.item1').nextAll());
+        console.log($('.item2').siblings());
+        console.log($('.item1, .item2'))//相当于$('.item1').add('.item2'))
+        console.log($('li').not('.item4'));
+        console.log($('li').filter('.item4'))//过滤出此元素筛选出来
+        console.log($('li').not(function (index) {
+            return $(this).hasClass('item4')//也可以用函数的方法等同于以上not方法
+        }));
+        console.log($('li').has('ul'));
+        console.log($('li').slice(2));// 返回item3 4 5   如果是负数 就从 尾部算起  例如 .slice(-1) 返回item5
+        console.log($('div').map(function(index,domElement) {
+                return this.id;//等同于return domElement.id  因为this指向domElement
+        }));
+        console.log($('div').each(function (index,domElement) {
+                if(this.id === 'box1'){
+                    return true;//类似for循环里的continue ,return false类似for循环里的break
+                }
+                this.title=this.id
+        }));
+        console.log(
+            $('#box3').find('.item4').css('color','red')
+                .end().find('.item1').css('color','blue')
+        )
+        console.log($('#box3').find('item1').end())
+        console.log($('.item4').nextUntil('.item6').addBack().css('color','orange'))
+
+    })
+</script>
+</body>
+</html>

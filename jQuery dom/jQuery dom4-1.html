@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery dom4-1</title>
+</head>
+<body>
+<h2>标题</h2>
+<ul>
+    <li class="item1">新闻标题-1</li>
+    <li class="item2">新闻标题-2</li>
+    <li class="item3">新闻标题-3</li>
+    <li class="item4">新闻标题-4</li>
+    <li class="item5">新闻标题-5</li>
+    <li class="item6">新闻标题-6</li>
+    <li class="item7">新闻标题-7</li>
+    <li class="item8">新闻标题-8</li>
+    <li class="item9">新闻标题-9</li>
+</ul>
+<script src="jquery/jquery-3.3.1.min.js"></script>
+<script>
+    $(function() {
+
+        var elements = $('li');
+
+        // elements.append('&nbsp;&nbsp;<a href="#">阅读更多...</a>')
+        // elements.prepend('&nbsp;&nbsp;<a href="#">阅读更多...</a>')
+        // elements.before('&nbsp;&nbsp;<a href="#">阅读更多...</a>')
+        // elements.after('&nbsp;&nbsp;<a href="#">阅读更多...</a>')
+
+        var element = $('ul');
+
+        // element.append($('h2'))
+        // element.append('<p>p1</p>', ['<p>p2</p>',$('h2')], '<p>p3</p>')
+
+        $('h2').appendTo(element);
+    });
+</script>
+</body>
+</html>

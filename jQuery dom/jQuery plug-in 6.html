@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery plug-in 6</title>
+</head>
+<body>
+<p>Lorem ipsum dolor sit amet,</p>
+<script src="jquery/jquery-1.12.4.js"></script>
+<script src="jquery/jquery.colorful.js"></script>
+<script>
+    $(function () {
+               $('p').colorful('init')
+
+               $('p').colorful('init', {
+                   background: true,
+                   font: false
+               })
+
+        $('p').colorful({
+            color: 'green',
+            background: true,
+            font: false
+        }).css('font-size', '30px');
+    });
+</script>
+</body>
+</html>

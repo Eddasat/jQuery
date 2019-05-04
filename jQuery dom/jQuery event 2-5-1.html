@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jQuery event 2-5-1</title>
+</head>
+<body>
+<ul>
+    <li class="item1">新闻标题-1</li>
+    <li class="item2">新闻标题-2</li>
+    <li class="item3">新闻标题-3</li>
+    <li class="item4">新闻标题-4</li>
+    <li class="item5">新闻标题-5</li>
+    <li class="item6">新闻标题-6</li>
+    <li class="item7">新闻标题-7</li>
+    <li class="item8">新闻标题-8</li>
+    <li class="item9">新闻标题-9</li>
+</ul>
+<button id="all">全部标记为已读</button>
+<script src="jquery/jquery-3.3.1.min.js"></script>
+<script>
+    $(function() {
+        $('li').click(function(event) {
+            console.log('已读 %o', $(this));
+            return '123';
+        });
+
+
+        $('#all').on('click', function() {
+            console.log($('li').click());
+        });
+    });
+</script>
+</body>
+</html>

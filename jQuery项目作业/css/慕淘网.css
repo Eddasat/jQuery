@@ -1,0 +1,703 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Microsoft YaHei UI";
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    background-repeat: no-repeat;
+}
+
+/*顶部*/
+.top {
+    background-color: #f3f5f7;
+}
+
+.front {
+    margin: 0 auto;
+    width: 1200px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.front p {
+    height: 50px;
+    width: 400px;
+    float: left;
+    line-height: 50px;
+}
+
+.front p span a {
+    color: red;
+}
+
+.front a:hover {
+    color: red;
+}
+
+.front .front-list:hover {
+    background-color: white;
+    color: red;
+}
+
+.front ul {
+    width: 500px;
+    height: 50px;
+    float: right;
+    overflow: hidden;
+}
+
+.front ul li {
+    width: 100px;
+    height: 50px;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+}
+
+.hr {
+    width: 1200px;
+    margin: 0 auto;
+    height: 2px;
+    background-color: gray;
+    opacity: 0.3;
+}
+
+/*logo*/
+.logo {
+    width: 1200px;
+    margin: 0 auto;
+    height: 100px;
+    overflow: hidden;
+}
+
+.logo .picture {
+    width: 250px;
+    height: 100px;
+    float: left;
+}
+
+.logo .picture img {
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.logo .form {
+    width: 750px;
+    height: 100px;
+    float: left;
+    margin-top: 30px;
+    overflow: hidden;
+}
+
+.logo .form .input {
+    width: 600px;
+    height: 40px;
+    border: 2px solid gray;
+    opacity: 0.3;
+    color: black;
+    float: left;
+}
+
+.logo .form .button {
+    width: 80px;
+    height: 44px;
+    border: none;
+    background-color: #000;
+    color: #fff;
+    float: left;
+    cursor: pointer;
+}
+
+.logo .buy {
+    width: 160px;
+    height: 44px;
+    float: right;
+    margin-top: 30px;
+    margin-right: 20px;
+    overflow: hidden;
+}
+
+.logo .buy .car {
+    width: 160px;
+    height: 40px;
+    float: left;
+    color: #f2f2f2;
+    font-size: 14px;
+    line-height: 40px;
+    padding-left: 10px;
+    background-color: red;
+    border: 2px solid red;
+}
+
+.logo .buy .car:hover {
+    background-color: white;
+    color: red;
+    border-color: transparent;
+}
+
+/*导航*/
+.nav-bg {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    background-color: #07111b;
+}
+
+.nav {
+    width: 1200px;
+    margin: 0 auto;
+    height: 50px;
+    line-height: 50px;
+}
+
+.nav ul {
+    width: 1000px;
+    overflow: hidden;
+    margin-left: 250px;
+}
+
+.nav ul li a {
+    float: left;
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    color: #f2f2f2;
+}
+
+.nav ul li a:hover {
+    color: red;
+}
+
+/*banner区*/
+.banner {
+    width: 1200px;
+    margin: 0 auto;
+    height: 500px;
+    position: relative;
+}
+
+.banner .list {
+    width: 220px;
+    height: 560px;
+    position: absolute;
+    top: -60px;
+    background-color: red;
+    z-index: 2;
+    opacity: 0.9;
+}
+
+.banner .list .list-title {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+}
+
+.banner .list .list-title img {
+    margin-right: 10px;
+    margin-left: 10px;
+    position: relative;
+    bottom: -3px;
+}
+
+.banner .list li {
+    color: white;
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 10px;
+}
+
+.banner .list li span {
+    position: absolute;
+    right: 10px;
+}
+
+.banner .list .other:hover {
+    background-color: white;
+    color: red;
+}
+
+.banner .lunbo {
+    width: 700px;
+    height: 500px;
+    margin-left: 230px;
+    float: left;
+    overflow: hidden;
+}
+
+.banner .lunbo .banner-slide {
+    width: 700px;
+    height: 500px;
+    position: absolute;
+    display: none;
+}
+
+.banner .lunbo .slide1 {
+    background-image: url("../img/focus-carousel/1.png");
+}
+
+.banner .lunbo .slide2 {
+    background-image: url("../img/focus-carousel/2.jpg");
+}
+
+.banner .lunbo .slide3 {
+    background-image: url("../img/focus-carousel/3.jpg");
+}
+
+.banner .lunbo .slide4 {
+    background-image: url("../img/focus-carousel/4.jpg");
+}
+
+.banner .lunbo .slide5 {
+    background-image: url("../img/focus-carousel/5.jpg");
+}
+
+.banner .lunbo .slide-active {
+    display: block;
+}
+
+.banner .news {
+    width: 245px;
+    height: 500px;
+    float: left;
+    margin-left: 10px;
+    position: relative;
+}
+
+.banner .news .new {
+    width: 243px;
+    height: 200px;
+    border-top: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+}
+
+.banner .news .new ul {
+    width: 100%;
+    height: 100%;
+    padding-left: 15px;
+}
+
+.banner .news .new li {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    font-size: 12px;
+}
+
+.banner .news .new .new-title {
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+}
+
+.banner .news .new .new-title span {
+    font-size: 16px;
+    color: red;
+}
+
+.banner .news .new .new-title a {
+    font-size: 10px;
+    color: gray;
+    position: absolute;
+    right: 20px;
+}
+
+.banner .news .new span {
+    font-weight: bold;
+}
+
+.banner .news .new a:hover {
+    color: red;
+}
+
+.banner .news .icon {
+    width: 244px;
+    height: 201px;
+    border-left: 1px solid gray;
+    border-top: 1px solid gray;
+}
+
+.banner .news .icon .icon-block {
+    width: 244px;
+    height: 66px;
+}
+
+.banner .news .icon .icon-block div {
+    width: 60px;
+    height: 66px;
+    text-align: center;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    float: left;
+    position: relative;
+}
+
+.banner .news .icon .icon-block a {
+    font-size: 12px;
+    position: absolute;
+    top: 7px;
+    left: 14px;
+}
+
+.banner .news .icon img {
+    width: 32px;
+    height: 32px;
+}
+
+.banner .news .news-img {
+    width: 245px;
+    height: 100px;
+}
+
+.banner .news .news-img img {
+    width: 100%;
+    height: 100px;
+}
+
+/*楼层区*/
+.floors {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.floors .floor .caption {
+    height: 64px;
+    position: relative;
+}
+
+.floors .floor .caption .caption-l {
+    width: 130px;
+    height: 64px;
+    line-height: 64px;
+    font-size: 22px;
+    position: relative;
+    text-align: center;
+}
+
+.floors .floor .caption .caption-l .circle {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    color: #fff;
+    background-color: #000;
+    text-align: center;
+    line-height: 24px;
+    font-size: 13px;
+    position: absolute;
+    left: 0;
+    top: 20px;
+}
+
+.floors .floor .caption .caption-l .text {
+    position: absolute;
+    left: 36px;
+}
+
+.floors .floor .caption .caption-r {
+    height: 24px;
+    position: absolute;
+    top: 20px;
+    right: 0;
+}
+
+.floors .floor .caption .caption-r a {
+    padding: 0 12px;
+    font-size: 14px;
+    color: #999;
+}
+
+.floors .floor .caption .caption-r span {
+    color: #ccc;
+    font-size: 13px;
+}
+
+.floors .floor .caption .caption-r .focus {
+    color: red;
+}
+
+.floors .floor .content .item {
+    border-top: 1px solid red;
+    position: relative;
+}
+
+.floors .floor .content .item1 img {
+    position: absolute;
+    right: 139px;
+    top: -8px;
+}
+
+.floors .floor .content .item2 img {
+    position: absolute;
+    right: 80px;
+    top: -8px;
+}
+
+.floors .floor .content .item3 {
+    display: none;
+}
+
+.floors .floor .content .item3 img {
+    position: absolute;
+    right: 19px;
+    top: -8px;
+}
+
+.floors .floor .content .commodity {
+    width: 200px;
+    height: 230px;
+    position: relative;
+    text-align: center;
+    float: left;
+}
+
+.floors .floor .content .commodity:hover {
+    cursor: pointer;
+    border: 1px solid #ddd;
+    width: 198px;
+    height: 228px;
+}
+
+.floors .floor .content .commodity img {
+    width: 114px;
+    height: 114px;
+    position: absolute;
+    top: 20px;
+    left: 43px;
+}
+
+.floors .floor .content .commodity .title {
+    font-size: 13px;
+    color: #777;
+    position: absolute;
+    top: 150px;
+    text-align: center;
+    width: 200px;
+}
+
+.floors .floor .content .commodity .price {
+    font-size: 14px;
+    color: red;
+    position: absolute;
+    top: 174px;
+    text-align: center;
+    width: 200px;
+}
+
+.clear:after {
+    content: ' ';
+    display: block;
+    clear: both;
+    zoom: 1;
+}
+
+/*友情链接区*/
+.com {
+    width: 1200px;
+    margin: 0 auto;
+    height: 200px;
+    overflow: hidden;
+}
+
+.com .block {
+    width: 25%;
+    height: 200px;
+    float: left;
+}
+
+.com .block .title {
+    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.com .block .text {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 20px;
+}
+
+.com .block .text a:hover {
+    color: red;
+}
+
+/*页脚*/
+.footer {
+    width: 100%;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    background-color: #f3f5f7;
+}
+
+.footer ul {
+    width: 50%;
+    height: 50px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding-top: 30px;
+}
+
+.footer ul li {
+    width: 9.09%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    float: left;
+}
+
+.footer ul li a:hover {
+    color: #07111b;
+}
+
+.footer p {
+    width: 100%;
+    height: 70px;
+    line-height: 30px;
+}
+
+#too{
+position: fixed;
+right:0;
+top:50%;
+margin-top:-100px;
+width:32px;
+height: 200px;
+}
+#too1{
+position: relative;
+width:40px;
+}
+#too1 i{
+position:absolute;
+left:0;
+top:0;
+background:gray;
+z-index: 2;
+height: 32px;
+}
+#too1 span{
+position:absolute;
+top:0;
+left:0;
+z-index: 1;
+width: 80px;
+height: 32px;
+text-align:center;
+line-height: 32px;
+}
+#too2 i{
+position:absolute;
+left:0;
+top:33px;
+background:gray;
+z-index: 2;
+height: 32px;
+}
+#too2 span{
+position:absolute;
+top:33px;
+left:0;
+z-index: 1;
+width: 80px;
+height: 32px;
+text-align:center;
+line-height: 32px;
+}
+#too3 i{
+position:absolute;
+left:0;
+top:66px;
+background:gray;
+z-index: 2;
+height: 32px;
+}
+#too3 span{
+position:absolute;
+top:66px;
+left:0;
+z-index: 1;
+width: 80px;
+height: 32px;
+text-align:center;
+line-height: 32px;
+}
+#too4 i{
+position:absolute;
+left:0;
+top:99px;
+background:gray;
+z-index: 2;
+height: 32px;
+}
+#too4 span{
+position:absolute;
+top:99px;
+left:0;
+z-index: 1;
+width: 80px;
+height: 32px;
+text-align:center;
+line-height: 32px;
+}
+#too5 i{
+position:absolute;
+left:0;
+top:132px;
+background:gray;
+z-index: 2;
+height: 32px;
+}
+#too5 a{
+position:absolute;
+top:132px;
+left:0;
+z-index: 1;
+width: 80px;
+height: 32px;
+text-align:center;
+line-height: 32px;
+}
+.transition{
+-o-transition:all 0.5s;
+-ms-transition:all 0.5s;
+-moz-transition:all 0.5s;
+-webkit-transition:all 0.5s;
+transition:all 0.5s;
+}
+#too1:hover span{
+left:-80px;
+background:gray;
+}
+#too2:hover span{
+left:-80px;
+background:gray;
+}
+#too3:hover span{
+left:-80px;
+background:gray;
+}
+#too4:hover span{
+left:-80px;
+background:gray;
+}
+#too5:hover a{
+left:-80px;
+background:gray;
+}
